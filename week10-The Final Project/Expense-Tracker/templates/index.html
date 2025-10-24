@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block main %}
+    <div class="dashboard">
+        <div class="welcome-section">
+            <h1>Your Financial Dashboard</h1>
+        </div>
+
+        <div class="summary-cards">
+            <div class="summary-card total-card">
+                <h3>Total Spending</h3>
+                <div class="amount">₹{{ total }}</div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="section">
+                <h2>Category Breakdown</h2>
+                {% if categories %}
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Amount</th>
+                                <th>Percentage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for cat in categories %}
+                                <tr>
+                                    <td>{{ cat.category }}</td>
+                                    <td>₹{{ "%.2f"|format(cat.total) }}</td>
+                                    <td>{{ "%.1f"|format((cat.total / total * 100) if total > 0 else 0) }}%</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p class="no-data">No expenses yet. Start tracking!</p>
+                {% endif %}
+            </div>
+
+            <div class="section">
+                <h2>Recent Expenses</h2>
+                {% if recent %}
+                    <div class="expense-list">
+                        {% for exp in recent %}
+                            <div class="expense-item">
+                                <div class="expense-info">
+                                    <strong>{{ exp.description }}</strong>
+                                    <span class="category-badge">{{ exp.category }}</span>
+                                </div>
+                                <div class="expense-details">
+                                    <span class="expense-amount">₹{{ "%.2f"|format(exp.amount) }}</span>
+                                    <span class="expense-date">{{ exp.date }}</span>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <a href="/history" class="btn-link">View All Expenses →</a>
+                {% else %}
+                    <p class="no-data">No expenses yet.</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="action-section">
+            <a href="/add" class="btn-primary btn-large">+ Add New Expense</a>
+        </div>
+    </div>
+{% endblock %}

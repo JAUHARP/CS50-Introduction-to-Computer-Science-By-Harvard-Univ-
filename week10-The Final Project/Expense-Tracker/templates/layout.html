@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %} - Expense Tracker</title>
+        <link rel="stylesheet" href="/static/styles.css">
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="nav-brand">Expense Tracker by JAUHAR</div>
+            <div class="nav-links">
+                {% if session.user_id %}
+                    <a href="/">Dashboard</a>
+                    <a href="/add">Add Expense</a>
+                    <a href="/history">History</a>
+                    <a href="/logout">Logout</a>
+                {% endif %}
+            </div>
+        </nav>
+
+        <main class="container">
+            {% block main %}{% endblock %}
+        </main>
+
+        <footer class="footer">
+            <p>Expense Tracker by JAUHAR- A CS50 Final Project</p>
+        </footer>
+    </body>
+
+</html>

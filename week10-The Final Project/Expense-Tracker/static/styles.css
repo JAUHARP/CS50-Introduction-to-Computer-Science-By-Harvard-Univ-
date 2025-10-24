@@ -1,0 +1,440 @@
+/* Reset margin, padding and set box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Brand name style */
+.nav-brand {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Navbar links style */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Hover effect for nav links */
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Container with max width and center alignment */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Main dashboard box */
+.dashboard {
+    background: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Welcome message styling */
+.welcome-section h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+/* Flex container for summary cards */
+.summary-cards {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Individual summary card */
+.summary-card {
+    flex: 1;
+    min-width: 200px;
+    padding: 1.5rem;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Summary card header */
+.summary-card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+/* Amount text within summary */
+.summary-card .amount {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Grid layout for content sections */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Section titles */
+.section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+/* Table styling */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Table cell styles */
+.data-table th,
+.data-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Table header background */
+.data-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Hover effect for table rows */
+.data-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* List container for expenses */
+.expense-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+/* Individual expense item */
+.expense-item {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-left: 3px solid #333;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Expense details column */
+.expense-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+/* Bold text inside expense info */
+.expense-info strong {
+    font-size: 0.95rem;
+}
+
+/* Category badge */
+.category-badge {
+    background-color: #333;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    display: inline-block;
+    width: fit-content;
+}
+
+/* Right aligned expense details */
+.expense-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.3rem;
+}
+
+/* Expense amount style */
+.expense-amount {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Expense date format */
+.expense-date {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* Message shown when there’s no data */
+.no-data {
+    text-align: center;
+    color: #999;
+    padding: 2rem;
+}
+
+/* Link styled as button */
+.btn-link {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: normal;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+/* Hover for links that look like buttons */
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* Section for action buttons */
+.action-section {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Primary button styles */
+.btn-primary {
+    background-color: #333;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Hover effect for primary buttons */
+.btn-primary:hover {
+    background-color: #555;
+}
+
+/* Larger button variation */
+.btn-large {
+    padding: 0.9rem 2rem;
+    font-size: 1.05rem;
+}
+
+/* Secondary button styles */
+.btn-secondary {
+    background-color: #888;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+/* Hover effect for secondary buttons */
+.btn-secondary:hover {
+    background-color: #666;
+}
+
+/* Delete button style */
+.btn-delete {
+    background-color: #d32f2f;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+/* Hover effect for delete button */
+.btn-delete:hover {
+    background-color: #b71c1c;
+}
+
+/* Form container box */
+.form-container {
+    background: white;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form header style */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Form input group spacing */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+/* Labels for form fields */
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* Input and select fields styling */
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 0.95rem;
+}
+
+/* Focus style for inputs */
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #333;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Layout of form action buttons */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Footer text under forms */
+.form-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Links in footer */
+.form-footer a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+/* Hover style for footer links */
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Container with history data */
+.history-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* History title */
+.history-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+/* Emphasize amount in table */
+.amount-cell {
+    font-weight: bold;
+}
+
+/* Container for error messages */
+.error-container {
+    background: white;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Icon size for error display */
+.error-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Error title style */
+.error-container h2 {
+    color: #d32f2f;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+/* Error message text */
+.error-message {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+/* Footer style */
+.footer {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.85rem;
+    margin-top: 2rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn-secondary {
+        margin-left: 0;
+    }
+
+    .summary-cards {
+        flex-direction: column;
+    }
+
+    .nav-links a {
+        margin-left: 1rem;
+    }
+}
